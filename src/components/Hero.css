@@ -12,6 +12,10 @@
     padding: 1rem;
 }
 
+.hero .left p{
+    font-weight: 400;
+}
+
 .hero h1{
     padding: 1rem 0;
 }

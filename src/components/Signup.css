@@ -28,3 +28,9 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media screen and (max-width:600px){
+    .signup img{
+        width: 250px;
+    }
+}

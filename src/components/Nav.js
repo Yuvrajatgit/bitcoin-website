@@ -1,18 +1,19 @@
-import React, {useState} from 'react';
-import './Navbar.css';
+import React, {useState}  from 'react';
+import './Nav.css';
 import {FaBars, FaTimes} from 'react-icons/fa';
 
-function Navbar() {
+function Nav() {
 
 const [click, setClick] = useState(false);
+const [mobile, setMobile] = useState(false);
 const handleClick = () => setClick(!click);
+
 
   return (
     <div className='header'>
-      <div className='container'>
+        <div className='container'>
         <h1>EK<span className='primary'>AD</span></h1>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          {/* <ul className={click ? 'nav-menu active' : 'nav-menu'}> */}
+        <ul className={!click ? "nav-links" : "nav-links mobile"}>
             <li>
                 <a href='/'>Home</a>
             </li>
@@ -26,15 +27,15 @@ const handleClick = () => setClick(!click);
                 <a href='/'>Contact</a>
             </li>
         </ul>
-        <div className='btn-group'>
-            <button className='btn'>Connect Wallet</button>
+        <div className='active'>
+            <button className='btn'>Signup</button>
         </div>
-        <div className='hamburger' onClick={handleClick}>
-            {click ? (<FaTimes size={20} style={{color:'#333'}}/>) : (<FaBars size={20} style={{color:'#333'}}/>)}  
+        <button className='hamburger' onClick={handleClick}>
+            {click ? (<FaTimes size={25} style={{color:'#333'}}/>) : (<FaBars size={25} style={{color:'#333'}}/>)}  
+        </button>
         </div>
-      </div>
     </div>
   )
 }
 
-export default Navbar;
+export default Nav;

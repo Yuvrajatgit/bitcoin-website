@@ -98,6 +98,6 @@
 
 @media  screen and (max-width: 478px) {
   .featured .container .rightFeatured .card {
-    width: 100%;
+    width: 80%;
   }
 }
